@@ -22,3 +22,11 @@ jobs:
 
       - name: run script
         run: node collectNews.js
+        
+        - name: run collect
+  run: node collectNews.js
+
+- name: run analyze
+  run: node analyzeNews.js
+  env:
+    OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
