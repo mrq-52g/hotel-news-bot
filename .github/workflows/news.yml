@@ -29,10 +29,10 @@ jobs:
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
 
-      - name: commit news json
+      - name: commit result
         run: |
           git config --global user.name "news-bot"
           git config --global user.email "bot@github.com"
-          git add news.json news_raw.json
+          git add news_raw.json news.json
           git commit -m "update news"
           git push
