@@ -27,7 +27,11 @@ async function run(){
 
  }
 
- fs.writeFileSync("news.json",JSON.stringify({news},null,2))
+fs.writeFileSync(
+ "news_raw.json",
+ JSON.stringify({news},null,2)
+)
 }
+
 
 run()
